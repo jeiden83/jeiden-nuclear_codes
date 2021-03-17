@@ -7,7 +7,7 @@
 //v0.4: Añadida la funcion "add" al modify_size();
 //v0.5: add(); funcionando correctamente	,	añadida la funcion display_array();		,	Modo debugger mejorado
 //v0.6: Añadida la funcion display(); asi como para el menu.
-//v0.7:
+//v0.7: Añadida y funcionando "modify();"
 #include <iostream>
 #include <stdlib.h>
 #include <string>
@@ -40,7 +40,7 @@ void add_to_array(int);			//Añade x cantidad al array al final de este
 int main(){
 	load_array();
 
-		menu();
+		menu();	//Ta chikita
 
 	cout<<"\ngrasias por su atencion\n";
 	system("pause");
