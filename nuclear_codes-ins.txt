@@ -1,0 +1,41 @@
+/*
+Programa que permitirá al usuario añadir, modificar y borrar codigos nucleares de un .txt externo al programa mediante un menú de seleccion.
+
+1. Add
+2. Modify
+3. Delete
+0. Exit
+
+//inicio
+	- cargará el archivo, load_array();
+		- de no haber un archivo, creará uno nuevo	;	new_file();
+
+add(){
+	- preguntara cuantos codigos quiere, esa cantidad añadira al arreglo dinamico	;	modify_size_array(add);
+	- preguntará los codigos dependiendo de cuantos quizo, los añadirá al final del array 	;	add_to_array();
+	- mostrará todos los codigos, con su respectiva numeracion una vez finalizado	;	display_array();
+
+
+modify(){
+		- de no haber archivo u codigos, dirá que no hay archivo/codigos, terminará la operacion modify();
+	- mostrará todos los codigos, con su respectiva numeracion 	;	display_array();
+	- preguntará el codigo nuevo por el cual remplazarlo	;	modify_code();
+	- mostrará todos los codigos nuevamente, con su respectiva numeracion 	;	display_array();
+		- preguntará nuevamente si quiere editar otro, de lo contrario salir.	
+}
+
+del(){
+		- de no haber archivo u codigos, dirá que no hay archivo/codigos, terminará la operacion delete();
+	- mostrará todos los codigos, con su respectiva numeracion 	;	display_array();
+	- preguntará el codigo para borrarlo,	;	delete_code();	; modify_size_array(delete);
+	- mostrará todos los codigos nuevamente, con su respectiva numeracion 	;	display_array();
+		- preguntará nuevamente si quiere borrar otro, de lo contrario salir.	
+}
+display_array(){
+	- mostrará todos los codigos, con su respectiva numeracion.
+}
+
+//final
+	- copiará todo el array en el archivo para terminar con las operaciones	;	unload_array();
+	- cerrará array para liberar espacio en la memoria	;	close_array();
+*/
