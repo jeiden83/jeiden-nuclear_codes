@@ -1,0 +1,77 @@
+/*v1.0
+Programa que permitirá al usuario añadir, modificar y borrar codigos nucleares de un .txt externo al programa mediante un menú de seleccion.
+
+1. Add
+2. Modify
+3. Delete
+4. Display
+0. Exit
+
+//inicio
+	- cargará el archivo, load_array();
+		- de no haber un archivo, creará uno nuevo	;	new_file();
+
+add(){
+	- preguntara cuantos codigos quiere, esa cantidad añadira al arreglo dinamico	;	modify_size_array(add);
+	- preguntará los codigos dependiendo de cuantos quizo, los añadirá al final del array 	;	add_to_array();
+	- mostrará todos los codigos, con su respectiva numeracion una vez finalizado	;	display_array();
+
+
+modify(){
+		- de no haber archivo u codigos, dirá que no hay archivo/codigos, terminará la operacion modify();
+	- mostrará todos los codigos, con su respectiva numeracion 	;	display_array();
+	- preguntará el codigo nuevo por el cual remplazarlo	;
+	- mostrará todos los codigos nuevamente, con su respectiva numeracion 	;	display_array();
+		- preguntará nuevamente si quiere editar otro, de lo contrario salir.	
+}
+
+del(){
+		- de no haber archivo u codigos, dirá que no hay archivo/codigos, terminará la operacion delete();
+	- mostrará todos los codigos, con su respectiva numeracion 	;	display_array();
+	- preguntará el codigo para borrarlo,	;	delete_code();	; modify_size_array(delete);
+	- mostrará todos los codigos nuevamente, con su respectiva numeracion 	;	display_array();
+		- preguntará nuevamente si quiere borrar otro, de lo contrario salir.	
+}
+
+display(){
+	- mostrará todos los codigos, con su respectiva numeracion.	;	display_array();
+}
+
+//final
+	- copiará todo el array en el archivo para terminar con las operaciones	;	unload_array();
+	- cerrará array para liberar espacio en la memoria	;	close_array();
+*/
+
+/*	
+Known bugs before the v1.0:
+>	- Si el programa se guarda sin codigos, se guardará con un espacio en blanco{
+		- O guardar el codigo con uno en blanco (000000)
+		> - O borrar el txt.	*es lo mas logico*, funcion remove("nombre del archivo");
+		- O no dejar guardar el codigo, ya que está en blanco}
+
+> El programa carga un espacio vacio como si fuera un code{
+	> Se coloca n_codes = 0}
+
+> No deberia dejar borrar codigos si no hay ninguno{
+	> No dejar entrar a borrar si n_codes == 0}
+
+> No deberia dejar borrar codigos si no hay ninguno luego de terminar de borrar uno{
+	> No dejar entrar a borrar si n_codes == 0}
+
+> El programa deja borrar hasta un espacio mas en el max{
+	> if (posicion >= n_codes) then repetir ins}
+
+> Si se decide borrar una cantidad maxima de codigos, el programa explotará{
+	> fixed, no dejar si la cantidad es mayor a n_codes}
+	
+> El programa no deberia permitir numeros negarivos en el add(), explota xD{
+	> if (n_codes_add < 1) then repetir ins}
+
+
+> El programa deberia solo cargar numeros y no letras{
+	- se revisa la cadena introducida, caracter por caracter, para comprobar si no hay un numeros## consumidor
+	> se pasa el string a numeros, y de numeros a string de nuevo para que solo se filtren numeros integer_check();}
+
+> El programa explota al introducir flotantes{
+	> digitar la variable primero en flotantes y convertirla a entero deberia arreglarlo flo_to_int:(); }
+*/
